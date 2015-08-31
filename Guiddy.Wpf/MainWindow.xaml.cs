@@ -27,16 +27,8 @@ namespace Guiddy.Wpf
 
         private void generateButton_Click(object sender, RoutedEventArgs e)
         {
-            var guid = Guid.NewGuid().ToString();
-
-            if (!checkBoxHyphens.IsChecked.GetValueOrDefault(true))
-            {
-                guid = guid.Replace("-", "");
-            }
-
-            guid = (checkBoxUppercase.IsChecked.GetValueOrDefault(true))
-                ? guid.ToUpperInvariant()
-                : guid.ToLowerInvariant();
+            var guid = GuidGenerator.Generate(checkBoxHyphens.IsChecked.GetValueOrDefault(true),
+                checkBoxUppercase.IsChecked.GetValueOrDefault(true));
 
             outputTextBox.Text = guid;
             outputTextBox.Focus();
