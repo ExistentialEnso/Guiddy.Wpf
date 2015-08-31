@@ -8,9 +8,9 @@
         Title="Guiddy" Height="226" Width="320">
     <Grid Margin="0,0,0,0">
         <TextBox x:Name="outputTextBox" HorizontalAlignment="Left" Height="23" Margin="10,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="3"/>
-        <Button x:Name="generateButton" Content="Generate" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="280" Click="generateButton_Click"/>
         <CheckBox x:Name="checkBoxUppercase" Content="Uppercase" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="201" Grid.ColumnSpan="3" IsChecked="True"/>
         <CheckBox x:Name="checkBoxHyphens" Content="Hyphens" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <CheckBox x:Name="checkBoxClipboard" Content="Copy To Clipboard" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Button x:Name="generateButton" Content="Generate" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="280" Click="generateButton_Click"/>
     </Grid>
 </Window>
