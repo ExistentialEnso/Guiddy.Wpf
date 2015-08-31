@@ -1,0 +1,16 @@
+﻿<Window x:Class="Guiddy.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Guiddy.Wpf"
+        mc:Ignorable="d"
+        Title="Guiddy" Height="226" Width="320">
+    <Grid Margin="0,0,0,0">
+        <TextBox x:Name="outputTextBox" HorizontalAlignment="Left" Height="23" Margin="10,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="3"/>
+        <Button x:Name="generateButton" Content="Generate" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="280" Click="generateButton_Click"/>
+        <CheckBox x:Name="checkBoxUppercase" Content="Uppercase" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="201" Grid.ColumnSpan="3" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxHyphens" Content="Hyphens" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxClipboard" Content="Copy To Clipboard" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" IsChecked="True"/>
+    </Grid>
+</Window>
