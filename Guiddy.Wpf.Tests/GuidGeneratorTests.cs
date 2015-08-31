@@ -25,5 +25,25 @@ namespace Guiddy.Wpf.Tests
             Assert.AreEqual(hyphenated, hyphenated.ToLower());
             Assert.AreEqual(nonHyphenated, nonHyphenated.ToLower());
         }
+
+        [Test]
+        public void If_Hyphens_False_Then_Result_Should_Not_Contain_Hyphens()
+        {
+            var uppercase = GuidGenerator.Generate(false, true);
+            var lowercase = GuidGenerator.Generate(false, false);
+
+            Assert.AreEqual(uppercase, uppercase.Replace("-", ""));
+            Assert.AreEqual(lowercase, lowercase.Replace("-", ""));
+        }
+
+        [Test]
+        public void If_Hyphens_True_Then_Result_Should_Contain_Hyphens()
+        {
+            var uppercase = GuidGenerator.Generate(true, true);
+            var lowercase = GuidGenerator.Generate(true, false);
+
+            Assert.AreNotEqual(uppercase, uppercase.Replace("-", ""));
+            Assert.AreNotEqual(lowercase, lowercase.Replace("-", ""));
+        }
     }
 }
