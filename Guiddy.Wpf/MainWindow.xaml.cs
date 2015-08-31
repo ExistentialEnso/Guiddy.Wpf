@@ -34,6 +34,7 @@ namespace Guiddy.Wpf
             outputTextBox.Focus();
             outputTextBox.SelectAll();
 
+            // Do automatic clipboard copy if setting enabled
             if (checkBoxClipboard.IsChecked.GetValueOrDefault(true))
             {
                 outputTextBox.Copy();
